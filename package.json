@@ -1,0 +1,96 @@
+{
+  "name": "fp-pages",
+  "version": "0.0.1",
+  "config": {
+    "name": "A UI toolkit for building web-apps using First Paint and Eleventy ",
+    "stylesheets": [
+      ""
+    ],
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "description": "FP Pages",
+  "main": "index._js",
+  "scripts": {
+    "startup": "run-p serve watch:*",
+    "start": "run-s scss js && run-p watch:* 11ty",
+    "clean-start": "trash run-s scss js && run-p watch:* 11ty",
+    "serve": "eleventy --serve --incremental",
+    "11ty": "eleventy --serve",
+    "build-11ty": "eleventy",
+    "build": "npx @11ty/eleventy",
+    "clean": "rm -rf www",
+    "trash": "trash www",
+    "scss": "sass --style compressed src/sass:src/css/. --load-path=node_modules",
+    "watch:scss": "sass --style compressed src/sass:src/css/. --load-path=node_modules --watch",
+    "build:scss": "sass --style compressed src/sass:src/css/. --load-path=node_modules",
+    "js": "babel src/js/ -d src/js/min --minified --out-file-extension .min.js",
+    "watch:js": "babel src/js/ -d src/js/min --out-file-extension .min.js  --minified --source-maps --watch",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "git:add": "git add .",
+    "git:cz": "git cz",
+    "git:push": "git push",
+    "commit": "run-s git:add git:cz git:push"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shawn-sandy/first-paint-apps.git"
+  },
+  "keywords": [
+    "Design",
+    "System",
+    "11ty",
+    "UIKits"
+  ],
+  "files": [
+    "/**"
+  ],
+  "author": "Shawn Sandy",
+  "contributors": [],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shawn-sandy/first-paint-apps/issues"
+  },
+  "homepage": "https://github.com/shawn-sandy/first-paint-apps#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^1.0.2",
+    "@11ty/eleventy-activity-feed": "^1.0.5",
+    "@11ty/eleventy-cache-assets": "^2.3.0",
+    "@11ty/eleventy-fetch": "^3.0.0",
+    "@11ty/eleventy-img": "^2.0.1",
+    "@11ty/eleventy-navigation": "^0.3.5",
+    "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "@11ty/is-land": "^3.0.0",
+    "@shawnsandy/code-clipper": "^0.2.15",
+    "@shawnsandy/ideas": "0.3.12",
+    "clean-css": "^5.3.1",
+    "dayjs": "^1.11.5",
+    "dotenv": "^16.0.3",
+    "html-minifier": "^4.0.0",
+    "jimp": "^0.16.2",
+    "lodash.take": "^4.1.1",
+    "sharp": "^0.30.7"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.19.3",
+    "@babel/preset-env": "^7.19.3",
+    "@shawnsandy/first-paint": "2.14.0",
+    "babel-watch": "^7.7.0",
+    "commitizen": "^4.2.5",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.28.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.0.1",
+    "hygen": "^6.2.11",
+    "lodash": "^4.17.21",
+    "npm-force-resolutions": "0.0.10",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.56.1",
+    "standard": "^17.0.0",
+    "trash-cli": "^5.0.0"
+  }
+}

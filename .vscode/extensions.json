@@ -1,0 +1,20 @@
+{
+  "recommendations": [
+    "shawnsandy.codestudio",
+    "dbaeumer.vscode-eslint",
+    "mkaufman.htmlhint",
+    "humao.rest-client",
+    "dsznajder.es7-react-js-snippets",
+    "eseom.nunjucks-template",
+    "douglaszaltron.nunjucks-vscode-extensionpack",
+    "sdras.vue-vscode-extensionpack",
+    "octref.vetur",
+    "hollowtree.vue-snippets",
+    "sdras.vue-vscode-snippets",
+    "vivaxy.vscode-conventional-commits",
+    "ms-edgedevtools.vscode-edge-devtools",
+    "github.vscode-pull-request-github",
+    "zaaack.markdown-editor",
+    "eliostruyf.vscode-front-matter"
+  ]
+}

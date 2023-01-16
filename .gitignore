@@ -1,0 +1,9 @@
+/node_modules
+.history
+.cache/
+www/
+.env
+
+# Local Netlify folder
+.netlify
+src/.DS_Store
