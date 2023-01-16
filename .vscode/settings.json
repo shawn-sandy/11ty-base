@@ -54,7 +54,6 @@
   "errorLens.excludePatterns": [
     "**/*.md"
   ],
-  "frontMatter.content.autoUpdateDate": true,
   "[markdown]": {
     "editor.fontSize": 14,
     "editor.lineHeight": 26,
@@ -67,6 +66,5 @@
       "other": "on"
     },
     "editor.minimap.enabled": true
-  },
-  "frontMatter.preview.host": "http://localhost:8080/"
+  }
 }
